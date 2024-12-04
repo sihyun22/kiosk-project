@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+#header-img img{
+  display: block;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 100%;
+  max-width: inherit;
+}
+body{
+  background: #eee;
+}
+#main-container{
+  background-color: #eee;
+  padding: 0.7em;
+  width: auto;
+  height: 100%;
+  max-width: inherit;
+
+}
+#menu-bar-main{
+  background-color: #fff;
+  display: flex;
+  justify-content:space-around;
+  list-style: none;
+  font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  & li{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 3.2vw;
+    cursor: pointer;
+  }
+}
+
+#menu-bar-main li:hover{
+  background-color: rgb(175, 50, 0);
+  color: #eee;
+  object-fit: cover;
+}
+.eng-name {
+  font-size: 1.4vw;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: rgb(197, 69, 52);
+  letter-spacing: 0.1em;
+
+}
+#menu-bar-second{
+  display: none;
+  background-color: #3f3f3f;
+  display: flex;
+  justify-content:left;
+  padding: 0.1em;
+  list-style: none;
+  font-weight: bold;
+  color:#eee;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  & li{
+    margin-left: 0.8em;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 2.8vw;
+    cursor: pointer;
+  }
+}
+#menu-bar-second:has(li:hover) li:not(:hover){
+  opacity: 0.3;
+}
+#menu-list-group{
+  cursor: pointer;
+  margin-top: 0.7em;
+  display: grid;
+  gap:0.4em;
+  /* align-items: center; */
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(6,1fr);
+  width: auto;
+  height: 800px;
+  /* border: 1px solid black; */
+}
+.menu-list-card{
+  background-color: #fff;
+  padding: 1em;
+  width: auto;
+  & h2{
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 1em;
+  }
+}
+
+.menu-img{
+  border-radius: 50%;
+  width: 100%;
+}
+
+
+
+.menu-icon{
+  color: #d4d4d4;
+}
+
+#main-section{
+  display: grid;
+  /* border: solid 3px black; */
+  width: auto;
+  height: 100%;
+  grid-template-columns: 55% 43.5%;
+  gap:0.5em;
+}
+
+#order-section{
+  cursor: pointer;
+  margin-top: 0.7em;
+  background-color: #fff;
+  width: auto;
+  height: 800px;
+  position: relative;
+}
+
+#order-header{
+  text-align: center;
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  & h1{
+    font-weight: 500;
+  }
+  & i{
+    margin-right: 0.3em;
+  }
+}
+.order-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.order-img{
+  margin: 1.5em 0;
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+
+}
+
+.order-menu{
+  display: grid;
+  grid-template-columns: 30% 60%;
+  padding: 0.5em;
+  position: relative;
+  text-align: center;
+
+  & h3{
+    text-align: center;
+    font-weight: 400;
+  }
+
+  & p{
+    position: absolute;
+    top:0.5em;
+    right: 2em;
+  }
+}
+
+.order-menu-top{
+  display: flex;
+
+}
+.order-bottom {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  & .menu-price{
+    font-weight: bold;
+  }
+}
+
+.order-count {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & .count-num{
+    text-align: center;
+    margin: 0 0.6em;
+  }
+  & button {
+    background: none;
+    border: none;
+    
+
+  }
+
+}
+
+hr {
+  width: 90%;
+  background-color: #d4d4d4;
+  border: 0.5;
+  margin-left : auto;
+  margin-right : auto;
+}
+
+.total-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+
+}
+
+.total-price :nth-child(even){
+  color: red;
+  font-weight: 800;
+}
+
+.order-list-bottom-button{
+  display: grid;
+  width: 100%;
+  height: auto;
+
+}
+#button-trash{
+  background-color: #a8a8a8;
+  text-align: center;
+  grid-column: 1/3;
+  height: 60px;
+  line-height: 60px;
+}
+
+#button-order{
+  background-color: rgb(248, 81, 81);
+  color: #eee;
+  text-align: center;
+  grid-column: 3/8;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+#button-reset{
+  background-color: #3f3f3f;
+  text-align: center;
+  color: #eee;
+  grid-column: 1/8;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+/* <div class="order-list-bottom-button">
+<div id="button-trash">
+  <button>휴지통</button></div>
+<div id="button-order"><button>휴지통</button></div>
+<div id="button-reset"><button>휴지통</button></div>
+</div> */
+/* <div id="order-section">
+<div id="order-header">
+<i class="fa-solid fa-cart-shopping"></i>
+<h1>주문내역</h1>
+</div>
+<div class="order-list">
+<div class="order-menu">
+<h3>아메리카노</h3>
+<p><i class="fa-solid fa-circle-xmark"></i></p>
+<img class="order-img" src="images/menu1.jpg" alt="menu1">
+
+<button><i class="fa-solid fa-circle-minus"></i></button>
+<div>1</div>
+<button><i class="fa-solid fa-circle-plus"></i></button>
+<div>6,500원</div>
+</div> */
+
+/* <div class="order-bottom">
+<div class="order-count">
+  <button><i class="fa-solid fa-circle-minus"></i></button>
+  <div>1</div>
+  <button><i class="fa-solid fa-circle-plus"></i></button>
+</div>
+<div>6,500원</div>
+</div> */
